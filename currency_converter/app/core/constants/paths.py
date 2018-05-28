@@ -5,7 +5,7 @@ from os.path import (join     as path_join,
 #
 # Basic used directories
 #
-PACKAGE_DIR = path_join(*path_normpath(path_realpath(__file__)).split(os_sep)[:-3])
+PACKAGE_DIR = path_join('/', *path_normpath(path_realpath(__file__)).split(os_sep)[:-4])
 APP_DIR     = path_join(PACKAGE_DIR, 'app')
 STORE_DIR   = path_join(PACKAGE_DIR, 'store')
 
@@ -14,3 +14,9 @@ STORE_DIR   = path_join(PACKAGE_DIR, 'store')
 #
 CURRENCY_CACHE_DIR  = path_join(STORE_DIR, 'cache')
 CURRENCY_CACHE_FILE = path_join(CURRENCY_CACHE_DIR, 'cache.json')
+
+#
+# Currency meta-data file
+#
+CURRENCY_META_DATA_FILE = path_join(STORE_DIR, 'currency.meta')
+ABC_SYMBOL_META_FILE    = path_join(STORE_DIR, 'abc_symbol_table.meta')

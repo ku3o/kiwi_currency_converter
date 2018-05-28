@@ -1,0 +1,1024 @@
+{
+    "AED": {
+        "abc_code": "AED",
+        "digital_code": "784",
+        "name": "UAE Dirham",
+        "state_code": "UAE",
+        "symbol": "د.إ"
+    },
+    "AFN": {
+        "abc_code": "AFN",
+        "digital_code": "971",
+        "name": "Afghani",
+        "state_code": "Afghanistan",
+        "symbol": "Af"
+    },
+    "ALL": {
+        "abc_code": "ALL",
+        "digital_code": "008",
+        "name": "Lek",
+        "state_code": "Albania",
+        "symbol": "L"
+    },
+    "AMD": {
+        "abc_code": "AMD",
+        "digital_code": "051",
+        "name": "Armenian Dram",
+        "state_code": "Armenia",
+        "symbol": "Դ"
+    },
+    "AOA": {
+        "abc_code": "AOA",
+        "digital_code": "973",
+        "name": "Kwanza",
+        "state_code": "Angola",
+        "symbol": "Kz"
+    },
+    "ARS": {
+        "abc_code": "ARS",
+        "digital_code": "032",
+        "name": "Argentine Peso",
+        "state_code": "Argentina",
+        "symbol": "$"
+    },
+    "AUD": {
+        "abc_code": "AUD",
+        "digital_code": "036",
+        "name": "Australian Dollar",
+        "state_code": "Australia",
+        "symbol": "$"
+    },
+    "AWG": {
+        "abc_code": "AWG",
+        "digital_code": "533",
+        "name": "Aruban Guilder/Florin",
+        "state_code": "Aruba",
+        "symbol": "ƒ"
+    },
+    "AZN": {
+        "abc_code": "AZN",
+        "digital_code": "944",
+        "name": "Azerbaijanian Manat",
+        "state_code": "Azerbaijan",
+        "symbol": "ман"
+    },
+    "BAM": {
+        "abc_code": "BAM",
+        "digital_code": "977",
+        "name": "Konvertibilna Marka",
+        "state_code": "Bosnia and Herzegovina",
+        "symbol": "КМ"
+    },
+    "BBD": {
+        "abc_code": "BBD",
+        "digital_code": "052",
+        "name": "Barbados Dollar",
+        "state_code": "Barbados",
+        "symbol": "$"
+    },
+    "BDT": {
+        "abc_code": "BDT",
+        "digital_code": "050",
+        "name": "Taka",
+        "state_code": "Bangladesh",
+        "symbol": "৳"
+    },
+    "BGN": {
+        "abc_code": "BGN",
+        "digital_code": "975",
+        "name": "Bulgarian Lev",
+        "state_code": "Bulgaria",
+        "symbol": "лв"
+    },
+    "BHD": {
+        "abc_code": "BHD",
+        "digital_code": "048",
+        "name": "Bahraini Dinar",
+        "state_code": "Bahrain",
+        "symbol": "ب.د"
+    },
+    "BIF": {
+        "abc_code": "BIF",
+        "digital_code": "108",
+        "name": "Burundi Franc",
+        "state_code": "Burundi",
+        "symbol": "₣"
+    },
+    "BMD": {
+        "abc_code": "BMD",
+        "digital_code": "060",
+        "name": "Bermudian Dollar",
+        "state_code": "Bermuda",
+        "symbol": "$"
+    },
+    "BND": {
+        "abc_code": "BND",
+        "digital_code": "096",
+        "name": "Brunei Dollar",
+        "state_code": "Brunei",
+        "symbol": "$"
+    },
+    "BOB": {
+        "abc_code": "BOB",
+        "digital_code": "068",
+        "name": "Boliviano",
+        "state_code": "Bolivia",
+        "symbol": "Bs."
+    },
+    "BRL": {
+        "abc_code": "BRL",
+        "digital_code": "986",
+        "name": "Brazilian Real",
+        "state_code": "Brazil",
+        "symbol": "R$"
+    },
+    "BSD": {
+        "abc_code": "BSD",
+        "digital_code": "044",
+        "name": "Bahamian Dollar",
+        "state_code": "Bahamas",
+        "symbol": "$"
+    },
+    "BWP": {
+        "abc_code": "BWP",
+        "digital_code": "072",
+        "name": "Pula",
+        "state_code": "Botswana",
+        "symbol": "P"
+    },
+    "BYR": {
+        "abc_code": "BYR",
+        "digital_code": "974",
+        "name": "Belarussian Ruble",
+        "state_code": "Belarus",
+        "symbol": "Br"
+    },
+    "BZD": {
+        "abc_code": "BZD",
+        "digital_code": "084",
+        "name": "Belize Dollar",
+        "state_code": "Belize",
+        "symbol": "$"
+    },
+    "CAD": {
+        "abc_code": "CAD",
+        "digital_code": "124",
+        "name": "Canadian Dollar",
+        "state_code": "Canada",
+        "symbol": "$"
+    },
+    "CDF": {
+        "abc_code": "CDF",
+        "digital_code": "976",
+        "name": "Congolese Franc",
+        "state_code": "Congo (Kinshasa)",
+        "symbol": "₣"
+    },
+    "CHF": {
+        "abc_code": "CHF",
+        "digital_code": "756",
+        "name": "Swiss Franc",
+        "state_code": "Lichtenstein",
+        "symbol": "₣"
+    },
+    "CLP": {
+        "abc_code": "CLP",
+        "digital_code": "152",
+        "name": "Chilean Peso",
+        "state_code": "Chile",
+        "symbol": "$"
+    },
+    "CNY": {
+        "abc_code": "CNY",
+        "digital_code": "156",
+        "name": "Yuan",
+        "state_code": "China",
+        "symbol": "¥"
+    },
+    "COP": {
+        "abc_code": "COP",
+        "digital_code": "170",
+        "name": "Colombian Peso",
+        "state_code": "Colombia",
+        "symbol": "$"
+    },
+    "CRC": {
+        "abc_code": "CRC",
+        "digital_code": "188",
+        "name": "Costa Rican Colon",
+        "state_code": "Costa Rica",
+        "symbol": "₡"
+    },
+    "CUP": {
+        "abc_code": "CUP",
+        "digital_code": "192",
+        "name": "Cuban Peso",
+        "state_code": "Cuba",
+        "symbol": "$"
+    },
+    "CVE": {
+        "abc_code": "CVE",
+        "digital_code": "132",
+        "name": "Cape Verde Escudo",
+        "state_code": "Cape Verde",
+        "symbol": "$"
+    },
+    "CZK": {
+        "abc_code": "CZK",
+        "digital_code": "203",
+        "name": "Czech Koruna",
+        "state_code": "Czech Republic",
+        "symbol": "Kč"
+    },
+    "DJF": {
+        "abc_code": "DJF",
+        "digital_code": "262",
+        "name": "Djibouti Franc",
+        "state_code": "Djibouti",
+        "symbol": "₣"
+    },
+    "DKK": {
+        "abc_code": "DKK",
+        "digital_code": "208",
+        "name": "Danish Krone",
+        "state_code": "Denmark",
+        "symbol": "kr"
+    },
+    "DOP": {
+        "abc_code": "DOP",
+        "digital_code": "214",
+        "name": "Dominican Peso",
+        "state_code": "Dominican Republic",
+        "symbol": "$"
+    },
+    "DZD": {
+        "abc_code": "DZD",
+        "digital_code": "012",
+        "name": "Algerian Dinar",
+        "state_code": "Algeria",
+        "symbol": "د.ج"
+    },
+    "EGP": {
+        "abc_code": "EGP",
+        "digital_code": "818",
+        "name": "Egyptian Pound",
+        "state_code": "Egypt",
+        "symbol": "£"
+    },
+    "ERN": {
+        "abc_code": "ERN",
+        "digital_code": "232",
+        "name": "Nakfa",
+        "state_code": "Eritrea",
+        "symbol": "Nfk"
+    },
+    "EUR": {
+        "abc_code": "EUR",
+        "digital_code": "978",
+        "name": "Euro",
+        "state_code": "Akrotiri and Dhekelia",
+        "symbol": "€"
+    },
+    "FJD": {
+        "abc_code": "FJD",
+        "digital_code": "242",
+        "name": "Fiji Dollar",
+        "state_code": "Fiji",
+        "symbol": "$"
+    },
+    "FKP": {
+        "abc_code": "FKP",
+        "digital_code": "238",
+        "name": "Falkland Islands Pound",
+        "state_code": "Falkland Islands",
+        "symbol": "£"
+    },
+    "GBP": {
+        "abc_code": "GBP",
+        "digital_code": "826",
+        "name": "Pound Sterling",
+        "state_code": "Alderney",
+        "symbol": "£"
+    },
+    "GEL": {
+        "abc_code": "GEL",
+        "digital_code": "981",
+        "name": "Lari",
+        "state_code": "Georgia",
+        "symbol": "ლ"
+    },
+    "GHS": {
+        "abc_code": "GHS",
+        "digital_code": "936",
+        "name": "Cedi",
+        "state_code": "Ghana",
+        "symbol": "₵"
+    },
+    "GIP": {
+        "abc_code": "GIP",
+        "digital_code": "292",
+        "name": "Gibraltar Pound",
+        "state_code": "Gibraltar",
+        "symbol": "£"
+    },
+    "GMD": {
+        "abc_code": "GMD",
+        "digital_code": "270",
+        "name": "Dalasi",
+        "state_code": "Gambia",
+        "symbol": "D"
+    },
+    "GNF": {
+        "abc_code": "GNF",
+        "digital_code": "324",
+        "name": "Guinea Franc",
+        "state_code": "Guinea",
+        "symbol": "₣"
+    },
+    "GTQ": {
+        "abc_code": "GTQ",
+        "digital_code": "320",
+        "name": "Quetzal",
+        "state_code": "Guatemala",
+        "symbol": "Q"
+    },
+    "GYD": {
+        "abc_code": "GYD",
+        "digital_code": "328",
+        "name": "Guyana Dollar",
+        "state_code": "Guyana",
+        "symbol": "$"
+    },
+    "HKD": {
+        "abc_code": "HKD",
+        "digital_code": "344",
+        "name": "Hong Kong Dollar",
+        "state_code": "Hong Kong",
+        "symbol": "$"
+    },
+    "HNL": {
+        "abc_code": "HNL",
+        "digital_code": "340",
+        "name": "Lempira",
+        "state_code": "Honduras",
+        "symbol": "L"
+    },
+    "HRK": {
+        "abc_code": "HRK",
+        "digital_code": "191",
+        "name": "Croatian Kuna",
+        "state_code": "Croatia",
+        "symbol": "Kn"
+    },
+    "HTG": {
+        "abc_code": "HTG",
+        "digital_code": "332",
+        "name": "Gourde",
+        "state_code": "Haiti",
+        "symbol": "G"
+    },
+    "HUF": {
+        "abc_code": "HUF",
+        "digital_code": "348",
+        "name": "Forint",
+        "state_code": "Hungary",
+        "symbol": "Ft"
+    },
+    "IDR": {
+        "abc_code": "IDR",
+        "digital_code": "360",
+        "name": "Rupiah",
+        "state_code": "Indonesia",
+        "symbol": "Rp"
+    },
+    "ILS": {
+        "abc_code": "ILS",
+        "digital_code": "376",
+        "name": "New Israeli Shekel",
+        "state_code": "Israel",
+        "symbol": "₪"
+    },
+    "INR": {
+        "abc_code": "INR",
+        "digital_code": "356",
+        "name": "Indian Rupee",
+        "state_code": "Bhutan",
+        "symbol": "₨"
+    },
+    "IQD": {
+        "abc_code": "IQD",
+        "digital_code": "368",
+        "name": "Iraqi Dinar",
+        "state_code": "Iraq",
+        "symbol": "ع.د"
+    },
+    "IRR": {
+        "abc_code": "IRR",
+        "digital_code": "364",
+        "name": "Iranian Rial",
+        "state_code": "Iran",
+        "symbol": "﷼"
+    },
+    "ISK": {
+        "abc_code": "ISK",
+        "digital_code": "352",
+        "name": "Iceland Krona",
+        "state_code": "Iceland",
+        "symbol": "Kr"
+    },
+    "JMD": {
+        "abc_code": "JMD",
+        "digital_code": "388",
+        "name": "Jamaican Dollar",
+        "state_code": "Jamaica",
+        "symbol": "$"
+    },
+    "JOD": {
+        "abc_code": "JOD",
+        "digital_code": "400",
+        "name": "Jordanian Dinar",
+        "state_code": "Jordan",
+        "symbol": "د.ا"
+    },
+    "JPY": {
+        "abc_code": "JPY",
+        "digital_code": "392",
+        "name": "Yen",
+        "state_code": "Japan",
+        "symbol": "¥"
+    },
+    "KES": {
+        "abc_code": "KES",
+        "digital_code": "404",
+        "name": "Kenyan Shilling",
+        "state_code": "Kenya",
+        "symbol": "Sh"
+    },
+    "KHR": {
+        "abc_code": "KHR",
+        "digital_code": "116",
+        "name": "Riel",
+        "state_code": "Cambodia",
+        "symbol": "៛"
+    },
+    "KPW": {
+        "abc_code": "KPW",
+        "digital_code": "408",
+        "name": "North Korean Won",
+        "state_code": "North Korea",
+        "symbol": "₩"
+    },
+    "KRW": {
+        "abc_code": "KRW",
+        "digital_code": "410",
+        "name": "South Korean Won",
+        "state_code": "South Korea",
+        "symbol": "₩"
+    },
+    "KWD": {
+        "abc_code": "KWD",
+        "digital_code": "414",
+        "name": "Kuwaiti Dinar",
+        "state_code": "Kuwait",
+        "symbol": "د.ك"
+    },
+    "KYD": {
+        "abc_code": "KYD",
+        "digital_code": "136",
+        "name": "Cayman Islands Dollar",
+        "state_code": "Cayman Islands",
+        "symbol": "$"
+    },
+    "KZT": {
+        "abc_code": "KZT",
+        "digital_code": "398",
+        "name": "Tenge",
+        "state_code": "Kazakhstan",
+        "symbol": "〒"
+    },
+    "LAK": {
+        "abc_code": "LAK",
+        "digital_code": "418",
+        "name": "Kip",
+        "state_code": "Laos",
+        "symbol": "₭"
+    },
+    "LBP": {
+        "abc_code": "LBP",
+        "digital_code": "422",
+        "name": "Lebanese Pound",
+        "state_code": "Lebanon",
+        "symbol": "ل.ل"
+    },
+    "LKR": {
+        "abc_code": "LKR",
+        "digital_code": "144",
+        "name": "Sri Lanka Rupee",
+        "state_code": "Sri Lanka",
+        "symbol": "Rs"
+    },
+    "LRD": {
+        "abc_code": "LRD",
+        "digital_code": "430",
+        "name": "Liberian Dollar",
+        "state_code": "Liberia",
+        "symbol": "$"
+    },
+    "LSL": {
+        "abc_code": "LSL",
+        "digital_code": "426",
+        "name": "Loti",
+        "state_code": "Lesotho",
+        "symbol": "L"
+    },
+    "LYD": {
+        "abc_code": "LYD",
+        "digital_code": "434",
+        "name": "Libyan Dinar",
+        "state_code": "Libya",
+        "symbol": "ل.د"
+    },
+    "MAD": {
+        "abc_code": "MAD",
+        "digital_code": "504",
+        "name": "Moroccan Dirham",
+        "state_code": "Morocco",
+        "symbol": "د.م."
+    },
+    "MDL": {
+        "abc_code": "MDL",
+        "digital_code": "498",
+        "name": "Moldavian Leu",
+        "state_code": "Moldova",
+        "symbol": "L"
+    },
+    "MKD": {
+        "abc_code": "MKD",
+        "digital_code": "807",
+        "name": "Denar",
+        "state_code": "Macedonia",
+        "symbol": "ден"
+    },
+    "MMK": {
+        "abc_code": "MMK",
+        "digital_code": "104",
+        "name": "Kyat",
+        "state_code": "Myanmar (Burma)",
+        "symbol": "K"
+    },
+    "MNT": {
+        "abc_code": "MNT",
+        "digital_code": "496",
+        "name": "Tugrik",
+        "state_code": "Mongolia",
+        "symbol": "₮"
+    },
+    "MOP": {
+        "abc_code": "MOP",
+        "digital_code": "446",
+        "name": "Pataca",
+        "state_code": "Macao",
+        "symbol": "P"
+    },
+    "MRO": {
+        "abc_code": "MRO",
+        "digital_code": "478",
+        "name": "Ouguiya",
+        "state_code": "Mauritania",
+        "symbol": "UM"
+    },
+    "MUR": {
+        "abc_code": "MUR",
+        "digital_code": "480",
+        "name": "Mauritius Rupee",
+        "state_code": "Mauritius",
+        "symbol": "₨"
+    },
+    "MVR": {
+        "abc_code": "MVR",
+        "digital_code": "462",
+        "name": "Rufiyaa",
+        "state_code": "Maldives",
+        "symbol": "ރ."
+    },
+    "MWK": {
+        "abc_code": "MWK",
+        "digital_code": "454",
+        "name": "Kwacha",
+        "state_code": "Malawi",
+        "symbol": "MK"
+    },
+    "MXN": {
+        "abc_code": "MXN",
+        "digital_code": "484",
+        "name": "Mexican Peso",
+        "state_code": "Mexico",
+        "symbol": "$"
+    },
+    "MYR": {
+        "abc_code": "MYR",
+        "digital_code": "458",
+        "name": "Malaysian Ringgit",
+        "state_code": "Malaysia",
+        "symbol": "RM"
+    },
+    "MZN": {
+        "abc_code": "MZN",
+        "digital_code": "943",
+        "name": "Metical",
+        "state_code": "Mozambique",
+        "symbol": "MTn"
+    },
+    "NAD": {
+        "abc_code": "NAD",
+        "digital_code": "516",
+        "name": "Namibia Dollar",
+        "state_code": "Namibia",
+        "symbol": "$"
+    },
+    "NGN": {
+        "abc_code": "NGN",
+        "digital_code": "566",
+        "name": "Naira",
+        "state_code": "Nigeria",
+        "symbol": "₦"
+    },
+    "NIO": {
+        "abc_code": "NIO",
+        "digital_code": "558",
+        "name": "Cordoba Oro",
+        "state_code": "Nicaragua",
+        "symbol": "C$"
+    },
+    "NOK": {
+        "abc_code": "NOK",
+        "digital_code": "578",
+        "name": "Norwegian Krone",
+        "state_code": "Norway",
+        "symbol": "kr"
+    },
+    "NPR": {
+        "abc_code": "NPR",
+        "digital_code": "524",
+        "name": "Nepalese Rupee",
+        "state_code": "Nepal",
+        "symbol": "₨"
+    },
+    "NZD": {
+        "abc_code": "NZD",
+        "digital_code": "554",
+        "name": "New Zealand Dollar",
+        "state_code": "Cook Islands",
+        "symbol": "$"
+    },
+    "OMR": {
+        "abc_code": "OMR",
+        "digital_code": "512",
+        "name": "Rial Omani",
+        "state_code": "Oman",
+        "symbol": "ر.ع."
+    },
+    "PAB": {
+        "abc_code": "PAB",
+        "digital_code": "590",
+        "name": "Balboa",
+        "state_code": "Panama",
+        "symbol": "B/."
+    },
+    "PEN": {
+        "abc_code": "PEN",
+        "digital_code": "604",
+        "name": "Nuevo Sol",
+        "state_code": "Peru",
+        "symbol": "S/."
+    },
+    "PGK": {
+        "abc_code": "PGK",
+        "digital_code": "598",
+        "name": "Kina",
+        "state_code": "Papua New Guinea",
+        "symbol": "K"
+    },
+    "PHP": {
+        "abc_code": "PHP",
+        "digital_code": "608",
+        "name": "Philippine Peso",
+        "state_code": "Philippines",
+        "symbol": "₱"
+    },
+    "PKR": {
+        "abc_code": "PKR",
+        "digital_code": "586",
+        "name": "Pakistan Rupee",
+        "state_code": "Pakistan",
+        "symbol": "₨"
+    },
+    "PLN": {
+        "abc_code": "PLN",
+        "digital_code": "985",
+        "name": "PZloty",
+        "state_code": "Poland",
+        "symbol": "zł"
+    },
+    "PYG": {
+        "abc_code": "PYG",
+        "digital_code": "600",
+        "name": "Guarani",
+        "state_code": "Paraguay",
+        "symbol": "₲"
+    },
+    "QAR": {
+        "abc_code": "QAR",
+        "digital_code": "634",
+        "name": "Qatari Rial",
+        "state_code": "Qatar",
+        "symbol": "ر.ق"
+    },
+    "RON": {
+        "abc_code": "RON",
+        "digital_code": "946",
+        "name": "Leu",
+        "state_code": "Romania",
+        "symbol": "L"
+    },
+    "RSD": {
+        "abc_code": "RSD",
+        "digital_code": "941",
+        "name": "Serbian Dinar",
+        "state_code": "Kosovo",
+        "symbol": "din"
+    },
+    "RUB": {
+        "abc_code": "RUB",
+        "digital_code": "643",
+        "name": "Russian Ruble",
+        "state_code": "Russia",
+        "symbol": "р. "
+    },
+    "RWF": {
+        "abc_code": "RWF",
+        "digital_code": "646",
+        "name": "Rwanda Franc",
+        "state_code": "Rwanda",
+        "symbol": "₣"
+    },
+    "SAR": {
+        "abc_code": "SAR",
+        "digital_code": "682",
+        "name": "Saudi Riyal",
+        "state_code": "Saudi Arabia",
+        "symbol": "ر.س"
+    },
+    "SBD": {
+        "abc_code": "SBD",
+        "digital_code": "090",
+        "name": "Solomon Islands Dollar",
+        "state_code": "Solomon Islands",
+        "symbol": "$"
+    },
+    "SCR": {
+        "abc_code": "SCR",
+        "digital_code": "690",
+        "name": "Seychelles Rupee",
+        "state_code": "Seychelles",
+        "symbol": "₨"
+    },
+    "SDG": {
+        "abc_code": "SDG",
+        "digital_code": "938",
+        "name": "Sudanese Pound",
+        "state_code": "Sudan",
+        "symbol": "£"
+    },
+    "SEK": {
+        "abc_code": "SEK",
+        "digital_code": "752",
+        "name": "Swedish Krona",
+        "state_code": "Sweden",
+        "symbol": "kr"
+    },
+    "SGD": {
+        "abc_code": "SGD",
+        "digital_code": "702",
+        "name": "Singapore Dollar",
+        "state_code": "Brunei",
+        "symbol": "$"
+    },
+    "SHP": {
+        "abc_code": "SHP",
+        "digital_code": "654",
+        "name": "Saint Helena Pound",
+        "state_code": "Ascension Island",
+        "symbol": "£"
+    },
+    "SLL": {
+        "abc_code": "SLL",
+        "digital_code": "694",
+        "name": "Leone",
+        "state_code": "Sierra Leone",
+        "symbol": "Le"
+    },
+    "SOS": {
+        "abc_code": "SOS",
+        "digital_code": "706",
+        "name": "Somali Shilling",
+        "state_code": "Somalia",
+        "symbol": "Sh"
+    },
+    "SRD": {
+        "abc_code": "SRD",
+        "digital_code": "968",
+        "name": "Suriname Dollar",
+        "state_code": "Suriname",
+        "symbol": "$"
+    },
+    "STD": {
+        "abc_code": "STD",
+        "digital_code": "678",
+        "name": "Dobra",
+        "state_code": "Sao Tome and Principe",
+        "symbol": "Db"
+    },
+    "SYP": {
+        "abc_code": "SYP",
+        "digital_code": "760",
+        "name": "Syrian Pound",
+        "state_code": "Syria",
+        "symbol": "ل.س"
+    },
+    "SZL": {
+        "abc_code": "SZL",
+        "digital_code": "748",
+        "name": "Lilangeni",
+        "state_code": "Swaziland",
+        "symbol": "L"
+    },
+    "THB": {
+        "abc_code": "THB",
+        "digital_code": "764",
+        "name": "Baht",
+        "state_code": "Thailand",
+        "symbol": "฿"
+    },
+    "TJS": {
+        "abc_code": "TJS",
+        "digital_code": "972",
+        "name": "Somoni",
+        "state_code": "Tajikistan",
+        "symbol": "ЅМ"
+    },
+    "TMT": {
+        "abc_code": "TMT",
+        "digital_code": "934",
+        "name": "Manat",
+        "state_code": "Turkmenistan",
+        "symbol": "m"
+    },
+    "TND": {
+        "abc_code": "TND",
+        "digital_code": "788",
+        "name": "Tunisian Dinar",
+        "state_code": "Tunisia",
+        "symbol": "د.ت"
+    },
+    "TOP": {
+        "abc_code": "TOP",
+        "digital_code": "776",
+        "name": "Pa’anga",
+        "state_code": "Tonga",
+        "symbol": "T$"
+    },
+    "TRY": {
+        "abc_code": "TRY",
+        "digital_code": "949",
+        "name": "Turkish Lira",
+        "state_code": "North Cyprus",
+        "symbol": "₤"
+    },
+    "TTD": {
+        "abc_code": "TTD",
+        "digital_code": "780",
+        "name": "Trinidad and Tobago Dollar",
+        "state_code": "Trinidad and Tobago",
+        "symbol": "$"
+    },
+    "TWD": {
+        "abc_code": "TWD",
+        "digital_code": "901",
+        "name": "Taiwan Dollar",
+        "state_code": "Taiwan",
+        "symbol": "$"
+    },
+    "TZS": {
+        "abc_code": "TZS",
+        "digital_code": "834",
+        "name": "Tanzanian Shilling",
+        "state_code": "Tanzania",
+        "symbol": "Sh"
+    },
+    "UAH": {
+        "abc_code": "UAH",
+        "digital_code": "980",
+        "name": "Hryvnia",
+        "state_code": "Ukraine",
+        "symbol": "₴"
+    },
+    "UGX": {
+        "abc_code": "UGX",
+        "digital_code": "800",
+        "name": "Uganda Shilling",
+        "state_code": "Uganda",
+        "symbol": "Sh"
+    },
+    "USD": {
+        "abc_code": "USD",
+        "digital_code": "840",
+        "name": "US Dollar",
+        "state_code": "American Samoa",
+        "symbol": "$"
+    },
+    "UYU": {
+        "abc_code": "UYU",
+        "digital_code": "858",
+        "name": "Peso Uruguayo",
+        "state_code": "Uruguay",
+        "symbol": "$"
+    },
+    "VEF": {
+        "abc_code": "VEF",
+        "digital_code": "937",
+        "name": "Bolivar Fuerte",
+        "state_code": "Venezuela",
+        "symbol": "Bs F"
+    },
+    "VND": {
+        "abc_code": "VND",
+        "digital_code": "704",
+        "name": "Dong",
+        "state_code": "Vietnam",
+        "symbol": "₫"
+    },
+    "VUV": {
+        "abc_code": "VUV",
+        "digital_code": "548",
+        "name": "Vatu",
+        "state_code": "Vanuatu",
+        "symbol": "Vt"
+    },
+    "WST": {
+        "abc_code": "WST",
+        "digital_code": "882",
+        "name": "Tala",
+        "state_code": "Samoa",
+        "symbol": "T"
+    },
+    "XAF": {
+        "abc_code": "XAF",
+        "digital_code": "950",
+        "name": "CFA Franc BCEAO",
+        "state_code": "Benin",
+        "symbol": "₣"
+    },
+    "XCD": {
+        "abc_code": "XCD",
+        "digital_code": "951",
+        "name": "East Caribbean Dollar",
+        "state_code": "Anguilla",
+        "symbol": "$"
+    },
+    "XPF": {
+        "abc_code": "XPF",
+        "digital_code": "953",
+        "name": "CFP Franc",
+        "state_code": "French Polynesia",
+        "symbol": "₣"
+    },
+    "YER": {
+        "abc_code": "YER",
+        "digital_code": "886",
+        "name": "Yemeni Rial",
+        "state_code": "Yemen",
+        "symbol": "﷼"
+    },
+    "ZAR": {
+        "abc_code": "ZAR",
+        "digital_code": "710",
+        "name": "Rand",
+        "state_code": "Lesotho",
+        "symbol": "R"
+    },
+    "ZMW": {
+        "abc_code": "ZMW",
+        "digital_code": "967",
+        "name": "Zambian Kwacha",
+        "state_code": "Zambia",
+        "symbol": "ZK"
+    },
+    "ZWL": {
+        "abc_code": "ZWL",
+        "digital_code": "932",
+        "name": "Zimbabwe Dollar",
+        "state_code": "Zimbabwe",
+        "symbol": "$"
+    }
+}
