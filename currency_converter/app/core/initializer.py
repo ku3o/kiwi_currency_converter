@@ -2,7 +2,7 @@ import lxml.html
 
 from os       import makedirs
 from requests import get as r_get
-from json     import dump as json_dumps
+from json     import dump as json_dump
 from os.path  import exists as path_exists
 
 from .constants.initializer import CURRENCY_DATA_URL
@@ -70,7 +70,7 @@ class Initializer(object):
             makedirs(STORE_DIR)
 
         with open(CURRENCY_META_DATA_FILE, 'w', encoding='utf-8') as filefp:
-            json_dumps(currencies, filefp, indent = 4, sort_keys = True, ensure_ascii = False)
+            json_dump(currencies, filefp, indent = 4, sort_keys = True, ensure_ascii = False)
 
         with open(ABC_SYMBOL_META_FILE, 'w', encoding='utf-8') as filefp:
-            json_dumps(convert_table, filefp, indent = 4, sort_keys = True, ensure_ascii = False)
+            json_dump(convert_table, filefp, indent = 4, sort_keys = True, ensure_ascii = False)
