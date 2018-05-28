@@ -1,5 +1,5 @@
 __author__ = 'Dmytro Safonov (dmytro.safonov@seznam.cz)'
 
-from app import app
+from app.app import app
 
 app.run(debug = True, host='0.0.0.0')
