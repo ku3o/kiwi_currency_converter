@@ -46,14 +46,27 @@ class Initializer(object):
         for row in all_rows:
             columns = row.getchildren()
 
-            abc_code     = columns[0].text.strip().upper()
-            symbol       = columns[1].text.strip()
-            digital_code = columns[2].text.strip()
-            full_name    = columns[3].text.strip()
-            county_name  = row.getchildren()[4].getchildren()[0].getchildren()[0].text.strip().
+            abc_code     = columns[0].text
+            symbol       = columns[1].text
+            digital_code = columns[2].text
+            full_name    = columns[3].text
+            contry_name  = ''
 
-            if symbol is None or symbol == '':
+            if len(columns) >= 5:
+                children_1 = columns[4].getchildren()
+                if len(children_1) >= 1:
+                    children_2 = children_1[0].getchildren()
+                    if len(children_2) >= 0:
+                        contry_name = children_2[0].text
+
+            if symbol is None or symbol == '' or abc_code is None or abc_code == '':
                 continue
+
+            abc_code     = abc_code.strip().upper()
+            symbol       = symbol.strip()
+            digital_code = digital_code.strip() if digital_code is not None else ''
+            full_name    = full_name.strip()    if full_name    is not None else ''
+            contry_name  = contry_name.strip()  if contry_name  is not None else ''
 
             db.session.add(CurrencyMeta(abc_code     = abc_code,
                                         digital_code = digital_code,

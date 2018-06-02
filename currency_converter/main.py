@@ -12,3 +12,8 @@ with app.app_context():
     ini = Initializer()
 
     ini.init_metadata_database()
+
+
+    # con = Converter()
+
+    # print(convert(source_cur, destinion_cur, 1))

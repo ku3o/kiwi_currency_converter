@@ -21,27 +21,27 @@
 #     return {}
 
 
-# class Converter(object):
+class Converter(object):
 
-#     def __init__(self, cache_timeout = 900):
-#         pass
-
-
-#     def laod_meta_data(self):
-#         self.abc_symbol_table = load_json_file(ABC_SYMBOL_META_FILE)
-#         self.currency_table   = load_json_file(CURRENCY_META_DATA_FILE)
+    def __init__(self, cache_timeout = 900):
+        pass
 
 
-#     def update_cache(self, source_cur, destinion_cur, value):
-#         if source_cur not in self.cache_db:
-#             self.cache_db[source_cur] = {}
+    # def laod_meta_data(self):
+    #     self.abc_symbol_table = load_json_file(ABC_SYMBOL_META_FILE)
+    #     self.currency_table   = load_json_file(CURRENCY_META_DATA_FILE)
 
-#         self.cache_db[source_cur][destinion_cur] = value
 
-#         #
-#         # ADD THREADING SAFE !!!!!!!
-#         #
-#         self.store_cache_db()
+    # def update_cache(self, source_cur, destinion_cur, value):
+    #     if source_cur not in self.cache_db:
+    #         self.cache_db[source_cur] = {}
+
+    #     self.cache_db[source_cur][destinion_cur] = value
+
+        #
+        # ADD THREADING SAFE !!!!!!!
+        #
+        # self.store_cache_db()
 
 
 #     def load_cache_db(self):
@@ -67,14 +67,14 @@
 #         return float(ret_amount)
 
 
-#     def convert(self, source_cur, destinion_cur, amount):
-#         # Cache hit
+    def convert(self, source_cur, destinion_cur, amount):
+        # Cache hit
 
-#             # Cache hit, but cache timeout applied
+            # Cache hit, but cache timeout applied
 
 
-#         # Otherwise grab data from online service
+        # Otherwise grab data from online service
 
-#             # Update cached value
+            # Update cached value
 
-#         return (ret_amount, float(amount) * float(ret_amount) , time())
+        return (ret_amount, float(amount) * float(ret_amount) , time())
