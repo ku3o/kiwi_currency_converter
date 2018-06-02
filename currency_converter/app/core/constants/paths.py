@@ -12,11 +12,9 @@ STORE_DIR   = path_join(PACKAGE_DIR, 'store')
 #
 # Currency cache directory and file
 #
-CURRENCY_CACHE_DIR  = path_join(STORE_DIR, 'cache')
-CURRENCY_CACHE_FILE = path_join(CURRENCY_CACHE_DIR, 'cache.json')
 
 #
-# Currency meta-data file
+# Database
 #
-CURRENCY_META_DATA_FILE = path_join(STORE_DIR, 'currency.meta')
-ABC_SYMBOL_META_FILE    = path_join(STORE_DIR, 'abc_symbol_table.meta')
+DATABASE_DIR = path_join(STORE_DIR, 'db')
+DATABASE_FILE = path_join(DATABASE_DIR, 'cache.sqlite')
