@@ -46,7 +46,7 @@ class Converter(object):
             last_updated  = db_results[1]
 
             # Check cache timeout
-            if current_ts - last_updated < self.cache_timeout:
+            if current_ts - last_updated >= self.cache_timeout:
                 convert_ratio = self.ask_online(source_cur, destinion_cur)
 
                 # Update convert ratio
