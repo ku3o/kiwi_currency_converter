@@ -1,9 +1,8 @@
-import lxml.html
-
 from time       import time
 from sqlalchemy import and_
 from datetime   import datetime
 from requests   import get as r_get
+from lxml.html  import fromstring as html_fromstr
 
 from .database            import db, CurrencyMeta, CurrencyCache
 from .constants.converter import ONLINE_CONVERTER_URL, TIME_TO_LIFE
@@ -17,9 +16,11 @@ class Converter(object):
 
     def ask_online(self, source_cur, destinion_cur):
         page = r_get(ONLINE_CONVERTER_URL,
-                     params = {'Amount' : 1, 'From' : source_cur, 'To' : destinion_cur})
+                     params = {'Amount' : 1,
+                               'From'   : source_cur,
+                               'To'     : destinion_cur})
 
-        data = lxml.html.fromstring(page.text)
+        data = html_fromstr(page.text)
 
         ret_amount = data.xpath('//span[@class="uccResultAmount"]')[0].text
 
@@ -27,47 +28,44 @@ class Converter(object):
 
 
     def convert(self, source_cur, destinion_cur, amount):
-        #
-        # ADD TYPE CHECK
-        #
+        error_template = "Invalid '{0}' argument type. Expecting - '{1}', got - '{2}'"
 
-        # Check cache hit
+        if type(source_cur) is not str:
+            raise ValueError(error_template.format(source_cur, str, type(source_cur)))
+
+        if type(destinion_cur) is not str:
+            raise ValueError(error_template.format(destinion_cur, str, type(destinion_cur)))
+
+        requested_amount = 0.0
+
+        try:
+            requested_amount = float(amount)
+        except ValueError as e:
+            raise ValueError("Invalid 'amount' argument data. Can't cast to FLOAT")
+
         current_ts    = int(time())
         convert_ratio = None
-        last_updated  = None
-
-        db_results = db.session.query(CurrencyCache.convert_ratio, CurrencyCache.last_updated).filter(
-                        and_(CurrencyCache.source_currency == source_cur,
-                             CurrencyCache.destination_currency == destinion_cur)).first()
+        cached_entry  = db.session.query(CurrencyCache).get((source_cur, destinion_cur))
 
         # Cache hit
-        if db_results is not None:
-            convert_ratio = db_results[0]
-            last_updated  = db_results[1]
+        if cached_entry is not None:
 
             # Check cache timeout
-            if current_ts - last_updated >= self.cache_timeout:
+            if current_ts - cached_entry.last_updated >= self.cache_timeout:
                 convert_ratio = self.ask_online(source_cur, destinion_cur)
 
-                # Update convert ratio
-                new_rest = db.session.query(CurrencyCache.convert_ratio, CurrencyCache.last_updated).filter(
-                            and_(CurrencyCache.source_currency == source_cur,
-                                 CurrencyCache.destination_currency == destinion_cur)).update(
-                                  {CurrencyCache.convert_ratio : convert_ratio,
-                                   CurrencyCache.last_updated: current_ts}, synchronize_session='fetch')
+                cached_entry.convert_ratio = convert_ratio
 
                 db.session.commit()
 
         # Cache miss
         else:
             convert_ratio = self.ask_online(source_cur, destinion_cur)
-    
-            new_entry = CurrencyCache(source_currency      = source_cur,
-                                      destination_currency = destinion_cur,
-                                      convert_ratio        = convert_ratio,
-                                      last_updated         = current_ts)
 
-            db.session.add(new_entry)
+            db.session.add(CurrencyCache(source_currency      = source_cur,
+                                         destination_currency = destinion_cur,
+                                         convert_ratio        = convert_ratio,
+                                         last_updated         = current_ts))
             db.session.commit()
 
-        return convert_ratio * amount
+        return float(convert_ratio * requested_amount)
