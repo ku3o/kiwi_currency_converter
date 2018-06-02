@@ -7,13 +7,13 @@ with app.app_context():
 
     db.init_app(app)
 
-    db.create_all()
+    # db.drop_all()
+    # db.create_all()
 
-    ini = Initializer()
+    # ini = Initializer()
 
-    ini.init_metadata_database()
+    # ini.init_metadata_database()
 
+    con = Converter()
 
-    # con = Converter()
-
-    # print(convert(source_cur, destinion_cur, 1))
+    print(con.convert('AED', 'BGN', 10))

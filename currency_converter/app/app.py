@@ -17,4 +17,4 @@ with app.app_context():
 		makedirs(DATABASE_DIR)
 
 	db.init_app(app)
-	db.create_all()
+	# db.create_all()

@@ -10,10 +10,6 @@ APP_DIR     = path_join(PACKAGE_DIR, 'app')
 STORE_DIR   = path_join(PACKAGE_DIR, 'store')
 
 #
-# Currency cache directory and file
-#
-
-#
 # Database
 #
 DATABASE_DIR = path_join(STORE_DIR, 'db')

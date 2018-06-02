@@ -1,3 +1,4 @@
+from time             import time
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -17,3 +18,20 @@ class CurrencyMeta(db.Model):
 
     symbol       = db.Column(type_    = db.String(3),
                              nullable = False)
+
+
+class CurrencyCache(db.Model):
+    source_currency      = db.Column(type_       = db.String(3),
+                                     primary_key = True,
+                                     nullable    = False)
+
+    destination_currency = db.Column(type_       = db.String(3),
+                                     primary_key = True,
+                                     nullable    = False)
+
+    convert_ratio        = db.Column(type_    = db.Float,
+                                     nullable = False)
+
+    last_updated         = db.Column(type_    = db.Integer,
+                                     nullable = False,
+                                     default  = time)
