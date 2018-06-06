@@ -4,37 +4,47 @@ from datetime   import datetime
 from requests   import get as r_get
 from lxml.html  import fromstring as html_fromstr
 
-from .database            import db, CurrencyMeta, CurrencyCache
+from .database            import db, CurrencyCache
 from .constants.converter import ONLINE_CONVERTER_URL, TIME_TO_LIFE
 
 
 class Converter(object):
 
     def __init__(self, cache_timeout = TIME_TO_LIFE):
-        self.cache_timeout = cache_timeout
+        self.cache_timeout    = cache_timeout
+        self.error_template   = "Invalid '{0}' argument type. Expecting - '{1}', got - '{2}'"
+        self.xpath_filter     = '//span[@class="uccResultAmount"]'
+        self.requested_amount = 1
 
 
-    def ask_online(self, source_cur, destinion_cur):
-        page = r_get(ONLINE_CONVERTER_URL,
-                     params = {'Amount' : 1,
-                               'From'   : source_cur,
-                               'To'     : destinion_cur})
-
-        data = html_fromstr(page.text)
-
-        ret_amount = data.xpath('//span[@class="uccResultAmount"]')[0].text
+    def parse_page(self, text_html_data):
+        data       = html_fromstr(text_html_data)
+        ret_amount = data.xpath(self.xpath_filter)[0].text
 
         return float(ret_amount)
 
 
-    def convert(self, source_cur, destinion_cur, amount):
-        error_template = "Invalid '{0}' argument type. Expecting - '{1}', got - '{2}'"
-
+    def ask_online(self, source_cur, destinion_cur):
         if type(source_cur) is not str:
-            raise ValueError(error_template.format(source_cur, str, type(source_cur)))
+            raise ValueError(self.error_template.format(source_cur, str, type(source_cur)))
 
         if type(destinion_cur) is not str:
-            raise ValueError(error_template.format(destinion_cur, str, type(destinion_cur)))
+            raise ValueError(self.error_template.format(destinion_cur, str, type(destinion_cur)))
+
+        page = r_get(ONLINE_CONVERTER_URL,
+                     params = {'Amount' : self.requested_amount,
+                               'From'   : source_cur,
+                               'To'     : destinion_cur})
+
+        return self.parse_page(page.text)
+
+
+    def convert(self, source_cur, destinion_cur, amount):
+        if type(source_cur) is not str:
+            raise ValueError(self.error_template.format(source_cur, str, type(source_cur)))
+
+        if type(destinion_cur) is not str:
+            raise ValueError(self.error_template.format(destinion_cur, str, type(destinion_cur)))
 
         requested_amount = 0.0
 
@@ -49,7 +59,6 @@ class Converter(object):
 
         # Cache hit
         if cached_entry is not None:
-
             # Check cache timeout
             if current_ts - cached_entry.last_updated >= self.cache_timeout:
                 convert_ratio = self.ask_online(source_cur, destinion_cur)
@@ -57,6 +66,8 @@ class Converter(object):
                 cached_entry.convert_ratio = convert_ratio
 
                 db.session.commit()
+            else:
+                convert_ratio = cached_entry.convert_ratio
 
         # Cache miss
         else:

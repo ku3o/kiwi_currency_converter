@@ -1,11 +1,10 @@
-# from app.core.database    import db
-from app.app              import app
+from app.app              import create_app
 from app.core.converter   import Converter
 from app.core.initializer import Initializer
-from sqlalchemy import and_
+from app.core.database    import db, CurrencyMeta, CurrencyCache
 
 
-from app.core.database            import db, CurrencyMeta, CurrencyCache
+app = create_app('../configs/development.py')
 
 with app.app_context():
 
@@ -22,21 +21,16 @@ with app.app_context():
 
     # print(con.convert('AED', 'BGN', 10))
 
-
-    # db_results = db.session.query(CurrencyCache.convert_ratio, CurrencyCache.last_updated).filter(
-    #                 and_(CurrencyCache.source_currency == 'GBP',
-    #                      CurrencyCache.destination_currency == 'EUR')).get()
-
-    db_results = db.session.query(CurrencyCache).get(('AEDz', 'BGN'))
+    db_results = db.session.query(CurrencyCache).get(('AED', 'BGN'))
 
 
-    print(dir(db_results))
+    # print(dir(db_results))
 
     print(db_results.convert_ratio)
 
-    db_results.convert_ratio = 0.5
+    # db_results.convert_ratio = 0.5
 
-    print(db_results.convert_ratio)
+    # print(db_results.convert_ratio)
 
 
-    db.session.commit()
+    # db.session.commit()
