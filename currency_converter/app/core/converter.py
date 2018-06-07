@@ -1,7 +1,8 @@
 from time       import time
 from sqlalchemy import and_
 from datetime   import datetime
-from requests   import get as r_get
+from requests   import get        as r_get
+from re         import compile    as re_compile
 from lxml.html  import fromstring as html_fromstr
 
 from .database            import db, CurrencyCache
@@ -15,13 +16,14 @@ class Converter(object):
         self.error_template   = "Invalid '{0}' argument type. Expecting - '{1}', got - '{2}'"
         self.xpath_filter     = '//span[@class="uccResultAmount"]'
         self.requested_amount = 1
+        self.clean_regexp     = re_compile(r'[^0-9\.]')
 
 
     def parse_page(self, text_html_data):
         data       = html_fromstr(text_html_data)
         ret_amount = data.xpath(self.xpath_filter)[0].text
 
-        return float(ret_amount)
+        return float(self.clean_regexp.sub('', ret_amount))
 
 
     def ask_online(self, source_cur, destinion_cur):
@@ -55,7 +57,7 @@ class Converter(object):
         if type(destinion_cur) is not str:
             raise ValueError(self.error_template.format(destinion_cur, str, type(destinion_cur)))
 
-        if type(amount) in not int and type(amount) is not float:
+        if type(amount) is not int and type(amount) is not float:
             raise ValueError(self.error_template.format(amount, float, type(amount)))
 
         if len(source_cur) != 3:
@@ -64,9 +66,8 @@ class Converter(object):
         if len(destinion_cur) != 3:
             raise ValueError("Invalid 'destinion_cur' argument format. Should be 3 letter string")
 
-        source_cur    = source_cur.upper()
-        destinion_cur = destinion_cur.upper()
-
+        source_cur       = source_cur.upper()
+        destinion_cur    = destinion_cur.upper()
         requested_amount = 0.0
 
         try:
@@ -82,16 +83,23 @@ class Converter(object):
         if cached_entry is not None:
             # Check cache timeout
             if current_ts - cached_entry.last_updated >= self.cache_timeout:
+
+                print('Cache timeout')
+
                 convert_ratio = self.ask_online(source_cur, destinion_cur)
 
                 cached_entry.convert_ratio = convert_ratio
+                cached_entry.last_updated  = current_ts
 
                 db.session.commit()
+
             else:
                 convert_ratio = cached_entry.convert_ratio
 
         # Cache miss
         else:
+            print('Cache miss')
+
             convert_ratio = self.ask_online(source_cur, destinion_cur)
 
             db.session.add(CurrencyCache(source_currency      = source_cur,

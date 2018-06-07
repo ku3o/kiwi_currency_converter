@@ -1,36 +1,49 @@
-from app.app              import create_app
-from app.core.converter   import Converter
-from app.core.initializer import Initializer
-from app.core.database    import db, CurrencyMeta, CurrencyCache
+from optparse import OptionParser
+from json     import dumps as json_dumps
+
+from app.core.manager import convert 
+from app.app          import create_app
 
 
-app = create_app('../configs/development.py')
+def get_cmd_args():
+    parser = OptionParser()
 
-with app.app_context():
+    parser.set_defaults(dst_cur = None)
 
-    # db.init_app(app)
+    parser.add_option('--amount', action = 'store',
+                                  type   = 'float',
+                                  dest   = 'amount',
+                                  help   = 'amount which we want to convert - float')
 
-    # db.drop_all()
-    # db.create_all()
+    parser.add_option('--input_currency', action = 'store',
+                                          type   = 'string',
+                                          dest   = 'src_cur',
+                                          help   = 'input currency - 3 letters name or currency symbol')
 
-    # ini = Initializer()
+    parser.add_option('--output_currency', action = 'store',
+                                           type   = 'string',
+                                           dest   = 'dst_cur',
+                                           help   = 'requested/output currency - 3 letters name or currency symbol')
+    return parser.parse_args()
 
-    # ini.init_metadata_database()
+def main():
+    try:
+        (options, args) = get_cmd_args()
 
-    # con = Converter()
+        app = create_app('../configs/development.py')
 
-    # print(con.convert('AED', 'BGN', 10))
+        with app.app_context():
+            print(json_dumps(convert(options.src_cur,
+                                     options.dst_cur,
+                                     options.amount),
+                             indent    = 4,
+                             sort_keys = True))
+        return 0
 
-    db_results = db.session.query(CurrencyCache).get(('AED', 'BGN'))
+    except Exception as e:
+        print(str(e))
+        return 1
 
 
-    # print(dir(db_results))
-
-    print(db_results.convert_ratio)
-
-    # db_results.convert_ratio = 0.5
-
-    # print(db_results.convert_ratio)
-
-
-    # db.session.commit()
+if __name__ == '__main__':
+    exit(main())
