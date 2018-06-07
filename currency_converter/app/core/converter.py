@@ -31,6 +31,15 @@ class Converter(object):
         if type(destinion_cur) is not str:
             raise ValueError(self.error_template.format(destinion_cur, str, type(destinion_cur)))
 
+        if len(source_cur) != 3:
+            raise ValueError("Invalid 'source_cur' argument format. Should be 3 letter string")
+
+        if len(destinion_cur) != 3:
+            raise ValueError("Invalid 'destinion_cur' argument format. Should be 3 letter string")
+
+        source_cur    = source_cur.upper()
+        destinion_cur = destinion_cur.upper()
+
         page = r_get(ONLINE_CONVERTER_URL,
                      params = {'Amount' : self.requested_amount,
                                'From'   : source_cur,
@@ -45,6 +54,18 @@ class Converter(object):
 
         if type(destinion_cur) is not str:
             raise ValueError(self.error_template.format(destinion_cur, str, type(destinion_cur)))
+
+        if type(amount) in not int and type(amount) is not float:
+            raise ValueError(self.error_template.format(amount, float, type(amount)))
+
+        if len(source_cur) != 3:
+            raise ValueError("Invalid 'source_cur' argument format. Should be 3 letter string")
+
+        if len(destinion_cur) != 3:
+            raise ValueError("Invalid 'destinion_cur' argument format. Should be 3 letter string")
+
+        source_cur    = source_cur.upper()
+        destinion_cur = destinion_cur.upper()
 
         requested_amount = 0.0
 
