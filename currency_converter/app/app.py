@@ -9,7 +9,8 @@ app = Flask(__name__)
 from app.core.database        import db
 from app                      import views
 from app.core.constants.paths import DATABASE_DIR
-
+from app.models               import CurrencyAPI
+from app.core.initializer     import Initializer
 
 
 def create_app(config=None):
@@ -21,6 +22,13 @@ def create_app(config=None):
         makedirs(DATABASE_DIR)
 
     db.init_app(app)
-    # db.create_all()
 
+    with app.app_context():
+        db.create_all()
+
+        Initializer().init_metadata_database()
+
+    app.add_url_rule('/currency_converter',
+                     view_func = CurrencyAPI.as_view('currency_converter'),
+                     methods   = ['GET'])
     return app

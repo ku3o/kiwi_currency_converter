@@ -54,12 +54,12 @@ def convert(source_cur, destination_cur, amount):
         if dst_cur is None:
             raise ValueError('Unkonw destination currency')
 
-        ret_structure['output'][dst_cur] = converter.convert(source_cur,
+        ret_structure['output'][dst_cur] = converter.convert(src_cur,
                                                              dst_cur,
                                                              amount)
     else:
         for dst_cur in db.session.query(CurrencyMeta.abc_code).all():
-            ret_structure['output'][dst_cur[0]] = converter.convert(source_cur,
+            ret_structure['output'][dst_cur[0]] = converter.convert(src_cur,
                                                                     dst_cur[0],
                                                                     amount)
     return ret_structure

@@ -17,6 +17,7 @@ class Converter(object):
         self.xpath_filter     = '//span[@class="uccResultAmount"]'
         self.requested_amount = 1
         self.clean_regexp     = re_compile(r'[^0-9\.]')
+        self.round_len        = 2
 
 
     def parse_page(self, text_html_data):
@@ -83,9 +84,6 @@ class Converter(object):
         if cached_entry is not None:
             # Check cache timeout
             if current_ts - cached_entry.last_updated >= self.cache_timeout:
-
-                print('Cache timeout')
-
                 convert_ratio = self.ask_online(source_cur, destinion_cur)
 
                 cached_entry.convert_ratio = convert_ratio
@@ -98,8 +96,6 @@ class Converter(object):
 
         # Cache miss
         else:
-            print('Cache miss')
-
             convert_ratio = self.ask_online(source_cur, destinion_cur)
 
             db.session.add(CurrencyCache(source_currency      = source_cur,
@@ -108,4 +104,4 @@ class Converter(object):
                                          last_updated         = current_ts))
             db.session.commit()
 
-        return float(convert_ratio * requested_amount)
+        return round(float(convert_ratio * requested_amount), self.round_len)
