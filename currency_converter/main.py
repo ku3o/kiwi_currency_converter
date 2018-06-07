@@ -26,6 +26,7 @@ def get_cmd_args():
                                            help   = 'requested/output currency - 3 letters name or currency symbol')
     return parser.parse_args()
 
+
 def main():
     try:
         (options, args) = get_cmd_args()

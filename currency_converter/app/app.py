@@ -26,6 +26,9 @@ def create_app(config=None):
     with app.app_context():
         db.create_all()
 
+        #
+        # I know, it's a weired step. But I want have meta-data on the fly
+        #
         Initializer().init_metadata_database()
 
     app.add_url_rule('/currency_converter',

@@ -68,9 +68,13 @@ class Initializer(object):
             full_name    = full_name.strip()    if full_name    is not None else ''
             contry_name  = contry_name.strip()  if contry_name  is not None else ''
 
-            db.session.add(CurrencyMeta(abc_code     = abc_code,
-                                        digital_code = digital_code,
-                                        full_name    = full_name,
-                                        contry_name  = contry_name,
-                                        symbol       = symbol))
+            #
+            # I know, it's a weired step. But I want have meta-data on the fly
+            #
+            if db.session.query(CurrencyMeta).get(abc_code) is None:
+                db.session.add(CurrencyMeta(abc_code     = abc_code,
+                                            digital_code = digital_code,
+                                            full_name    = full_name,
+                                            contry_name  = contry_name,
+                                            symbol       = symbol))
         db.session.commit()

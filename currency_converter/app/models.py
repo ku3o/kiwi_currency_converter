@@ -21,5 +21,4 @@ class CurrencyAPI(MethodView):
                                    output_currency,
                                    amount))
         except Exception as e:
-            return str(e)
             return (jsonify({'message':"Something happened. Please contact your administrator. And thank you for fish."}), 500)
