@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
+
 from optparse import OptionParser
-from json     import dumps as json_dumps
+from os       import environ as os_env
+from json     import dumps   as json_dumps
 
 from app.core.manager import convert 
 from app.app          import create_app
@@ -31,7 +34,15 @@ def main():
     try:
         (options, args) = get_cmd_args()
 
-        app = create_app('../configs/development.py')
+        if not options.src_cur:
+            raise ValueError("Missing 'input_currency' argument")
+
+        if not options.amount:
+            raise ValueError("Missing 'amount' argument")
+
+        config_file_path = os_env.get('DEV_CONFIG', None) or '../configs/production.py'
+        
+        app = create_app(config_file_path)
 
         with app.app_context():
             print(json_dumps(convert(options.src_cur,
